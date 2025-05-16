@@ -2,6 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* تعريفات الخطوط بطريقة @font-face كاحتياط */
+@font-face {
+  font-family: "DGAgnadeen";
+  src: url("/fonts/alfont_com_DGAgnadeen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DGAgnadeen";
+  src: url("/fonts/alfont_com_DGAgnadeen-Bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DGAgnadeen";
+  src: url("/fonts/alfont_com_DGAgnadeen-Extrabold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DGAgnadeen";
+  src: url("/fonts/alfont_com_DGAgnadeen-Heavy.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DGAgnadeen";
+  src: url("/fonts/alfont_com_DGAgnadeen-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DGAgnadeen";
+  src: url("/fonts/alfont_com_DGAgnadeen-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DGAgnadeen";
+  src: url("/fonts/alfont_com_DGAgnadeen-Ultralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blabeloo";
+  src: url("/fonts/Blabeloo-font-v.1.0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body,
 #root {
@@ -10,6 +75,38 @@ body,
 
 * {
   box-sizing: border-box;
+}
+
+/* إضافة تطبيق الخطوط على العناصر المختلفة */
+:root {
+  --font-dgagnadeen: "DGAgnadeen";
+  --font-almarai: "Almarai";
+  --font-blabeloo: "Blabeloo";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-dgagnadeen), var(--font-almarai), sans-serif;
+}
+
+body {
+  font-family: var(--font-dgagnadeen), var(--font-almarai), sans-serif;
+}
+
+.font-dgagnadeen {
+  font-family: var(--font-dgagnadeen), sans-serif;
+}
+
+.font-almarai {
+  font-family: var(--font-almarai), sans-serif;
+}
+
+.font-blabeloo {
+  font-family: var(--font-blabeloo), sans-serif;
 }
 
 @layer base {

@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        dgagnadeen: ["var(--font-dgagnadeen)"],
+        almarai: ["var(--font-almarai)"],
+        blabeloo: ["var(--font-blabeloo)"],
+      },
       colors: {
         keyframes: {
           "accordion-down": {

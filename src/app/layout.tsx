@@ -16,41 +16,42 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const dgagnadeen = localFont({
   src: [
     {
-      path: "../fonts/alfont_com_DGAgnadeen-Thin.ttf",
+      path: "../../src/fonts/alfont_com_DGAgnadeen-Thin.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../fonts/alfont_com_DGAgnadeen-Ultralight.ttf",
+      path: "../../src/fonts/alfont_com_DGAgnadeen-Ultralight.ttf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../fonts/alfont_com_DGAgnadeen-Light.ttf",
+      path: "../../src/fonts/alfont_com_DGAgnadeen-Light.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../fonts/alfont_com_DGAgnadeen-Regular.ttf",
+      path: "../../src/fonts/alfont_com_DGAgnadeen-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/alfont_com_DGAgnadeen-Bold.ttf",
+      path: "../../src/fonts/alfont_com_DGAgnadeen-Bold.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../fonts/alfont_com_DGAgnadeen-Extrabold.ttf",
+      path: "../../src/fonts/alfont_com_DGAgnadeen-Extrabold.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../fonts/alfont_com_DGAgnadeen-Heavy.ttf",
+      path: "../../src/fonts/alfont_com_DGAgnadeen-Heavy.ttf",
       weight: "700",
       style: "normal",
     },
   ],
+  variable: "--font-dgagnadeen",
 });
 
 export const metadata: Metadata = {
@@ -80,10 +81,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl">
+    <html
+      lang="ar"
+      dir="rtl"
+      className={`${dgagnadeen.variable} ${almarai.variable}`}
+    >
       <AuthChecker>
         <Providers>
-          <body className={cn(dgagnadeen.className, "dark:bg-dark_background")}>
+          <body className={cn("dark:bg-dark_background")}>
             <NextTopLoader height={3} showSpinner={false} />
             <ThemeProvider
               attribute="light"
