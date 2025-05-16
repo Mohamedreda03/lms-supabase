@@ -17,7 +17,7 @@ import AddTestQuestionModel from "../admin_test_models/AddTestQuestionModel";
 import EditTestQuestionModel from "../admin_test_models/EditTestQuestionModel";
 import { deleteImageFromSupabase } from "@/utils/uploadToSupabase";
 
-export default function ({
+export default function TestComponent({
   courseId,
   chapterId,
   lessonId,

@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useMutation, useQuery, useQueryClient } from "react-query";
 
-export default function page({
+export default function Page({
   params: { testId, courseId, lessonId },
 }: {
   params: { testId: string; courseId: string; lessonId: string };

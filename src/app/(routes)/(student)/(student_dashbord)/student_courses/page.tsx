@@ -29,9 +29,8 @@ export default function StudentCourses() {
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
           {data?.subscriptions.map((subscription: any) => (
-            <div>
+            <div key={subscription?.course.id}>
               <CourseCard
-                key={subscription?.course.id}
                 course={subscription.course}
                 isOwned={true}
                 isUserAuth={true}

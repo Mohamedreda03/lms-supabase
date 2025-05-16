@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useQuery } from "react-query";
 
-export default function page({ params }: { params: { courseId: string } }) {
+export default function Page({ params }: { params: { courseId: string } }) {
   const { data, isLoading } = useQuery({
     queryKey: ["sub", "course", params.courseId],
     queryFn: async () => {

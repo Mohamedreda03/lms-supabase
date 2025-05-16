@@ -1,3 +1,4 @@
+// This file is configured to run in Node.js environment
 import NextAuth from "next-auth";
 import authConfig from "./lib/auth.config";
 
